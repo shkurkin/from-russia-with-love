@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <head>
-  <title>From Russia With Love</title>
+  <title>Find Me</title>
   <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <script src="js/bootstrap.min.js" ></script>
   <link rel="stylesheet" type="text/css" href="css/custom.css">
+  <script src="js/map.js"></script>
+  <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkumcg10Dx9l8oNq4goXyybJOdDEU9M3s&sensor=true">
+    </script>
 </head>
 <body>
-  <div class="container">
-    <img src="images/from-russia.png" width="612" class="center-block logo">
-    <div class="input-group input-group-lg user-input">
-      <input type="text" class="form-control" placeholder="Your Email">
-    </div>
-      <img src="images/nsa-logo.jpg" width="200" class="center-block nsa-logo">
-    <div class="row">
-      <p>Dear NSA,</p>
-    </div>
+  <div class="input-group input-group-lg name-input">
+    <form>
+      <input type="text" class="form-control" placeholder="Find Me">
+    </form>
   </div>
+  <div id="map-canvas"></div>
 </body>
 </html>
