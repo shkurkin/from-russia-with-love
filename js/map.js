@@ -1,6 +1,12 @@
 $(function(){
   google.maps.event.addDomListener(window, 'load', initialize);
+  getGraphData();
 });
+
+
+/////////////////
+// GOOGLE MAPS
+////////////////
 
 function initialize() {
 
@@ -15,6 +21,7 @@ function initialize() {
     e.preventDefault();
     processName(e);
   });
+
 }
 
 function processName(e){
@@ -44,3 +51,38 @@ function addInfoWindow(marker, popup) {
     infoWindow.open(map, marker);
   });
 }
+
+
+////////////////
+// FACEBOOK API
+////////////////
+
+function getGraphData() {
+  $.ajax({
+    url: "http://graph.facebook.com/1036590399?fields=picture,name"
+  }).done(function(response){
+    processGraphData(response)
+  }).fail(function(){
+    console.log("Request Failed");
+  });
+}
+
+
+///  working on this
+// function getByName(name) {
+//   $.ajax({
+//     url: "http://graph.facebook.com/search?q=frank%20turner&type=user"
+
+//   })
+// }
+
+
+function processGraphData(response) {
+  debugger
+  var latLng = new google.maps.LatLng(0,0);
+  var popup = '<img src="' + response.picture.data.url + '">' +
+  '<p>' +  response.name + '</p>';
+  addMarker(latLng, popup);
+}
+
+
