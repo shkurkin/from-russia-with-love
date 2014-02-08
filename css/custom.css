@@ -1,0 +1,32 @@
+@font-face{
+  font-family: 'SpecialElite';
+  src: url('../fonts/SpecialElite-webfont.eot');
+  src: url('../fonts/SpecialElite-webfont.eot?iefix') format('eot'),
+       url('../fonts/SpecialElite-webfont.woff') format('woff'),
+       url('../fonts/SpecialElite-webfont.ttf') format('truetype'),
+       url('../fonts/SpecialElite-webfont.svg#webfont') format('svg');
+}
+
+.logo {
+  margin-top: 12px;
+}
+
+.user-input {
+  width: 50%;
+  margin: 24px auto;
+}
+
+.nsa-logo {
+  width: 200px;
+  margin-bottom: 24px;
+  margin-top: 12px;
+}
+
+.form-control {
+text-align: center;
+}
+
+p {
+  font-family: 'SpecialElite', Arial, sans-serif;
+  font-size: 1.3em;
+}
